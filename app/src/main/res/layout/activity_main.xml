@@ -6,13 +6,144 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="156dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nombre" />
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="225dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="55dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Primer elemento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="225dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Segundo elemento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et1" />
+
+    <EditText
+        android:id="@+id/et3"
+        android:layout_width="225dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Tercer elemento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et2" />
+
+    <EditText
+        android:id="@+id/et4"
+        android:layout_width="225dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Cuarto elemento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et3" />
+
+    <EditText
+        android:id="@+id/en1"
+        android:layout_width="131dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="Valor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/en2"
+        android:layout_width="131dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:hint="Valor"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et2"
+        app:layout_constraintTop_toBottomOf="@+id/en1" />
+
+    <EditText
+        android:id="@+id/en3"
+        android:layout_width="131dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:hint="Valor"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et3"
+        app:layout_constraintTop_toBottomOf="@+id/en2" />
+
+    <EditText
+        android:id="@+id/en4"
+        android:layout_width="131dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:hint="Valor"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et4"
+        app:layout_constraintTop_toBottomOf="@+id/en3" />
+
+    <Spinner
+        android:id="@+id/ListColor"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="156dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et4"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="162dp"
+        android:text="GRAFICAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ListColor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

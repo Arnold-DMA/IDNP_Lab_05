@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IDNP_Lab_05">
         <activity
+            android:name=".Diagrama"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
