@@ -13,7 +13,7 @@ public class Diagrama extends AppCompatActivity {
 
     String [] nombres;
     String [] valores;
-    double [] valoresDouble;
+    int [] valoresInt;
     String color;
 
     @Override
@@ -24,7 +24,7 @@ public class Diagrama extends AppCompatActivity {
         Bundle datos = getIntent().getExtras();
         nombres = datos.getStringArray("Nombres");
         valores = datos.getStringArray("Valores");
-        valoresDouble = new double[]{Integer.parseInt(valores[0]),
+        valoresInt = new int[]{Integer.parseInt(valores[0]),
                 Integer.parseInt(valores[1]),
                 Integer.parseInt(valores[2]),
                 Integer.parseInt(valores[3])};
@@ -47,8 +47,12 @@ public class Diagrama extends AppCompatActivity {
             pincel.setStrokeWidth(3);
             pincel.setTextSize(40);
             pincel.setTextAlign(Paint.Align.CENTER);
-            canvas.drawText("Nombre populares de mascotas",475, 150, pincel);
+            canvas.drawText("Nombres populares de mascotas",475, 150, pincel);
             pincel.setTextSize(30);
+            canvas.drawText(nombres[0], 250, 750, pincel);
+            canvas.drawText(nombres[1], 450, 750, pincel);
+            canvas.drawText(nombres[2], 650, 750, pincel);
+            canvas.drawText(nombres[3], 850, 750, pincel);
             pincel.setTextAlign(Paint.Align.RIGHT);
             canvas.drawText("0",120, 710, pincel);
             canvas.drawText("20",120, 610, pincel);
@@ -56,6 +60,19 @@ public class Diagrama extends AppCompatActivity {
             canvas.drawText("60",120, 410, pincel);
             canvas.drawText("80",120, 310, pincel);
             canvas.drawText("100",120, 210, pincel);
+
+            if(color.equals("Rojo"))
+                pincel.setColor(Color.RED);
+            else if(color.equals("Verde"))
+                pincel.setColor(Color.GREEN);
+            else
+                pincel.setColor(Color.BLUE);
+
+            pincel.setStyle(Paint.Style.FILL);
+            canvas.drawRect(200, 200+5*(100-valoresInt[0]), 300, 700, pincel);
+            canvas.drawRect(400, 200+5*(100-valoresInt[1]), 500, 700, pincel);
+            canvas.drawRect(600, 200+5*(100-valoresInt[2]), 700, 700, pincel);
+            canvas.drawRect(800, 200+5*(100-valoresInt[3]), 900, 700, pincel);
         }
 
     }
